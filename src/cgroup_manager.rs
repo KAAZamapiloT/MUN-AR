@@ -76,3 +76,11 @@ impl CGroupManager {
         builder.delete(&self.cgroup_path);
     }
 }
+
+impl Drop for CgroupManager {
+    fn drop(&mut self) {
+        println!("Teardown of cgroup completed {}", self.container_name);
+
+        let _ = std::fs::remove_dir_all(&self.cgroup_path);
+    }
+}
