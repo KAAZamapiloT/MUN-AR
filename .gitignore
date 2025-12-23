@@ -1,0 +1,52 @@
+# ==========================================
+# 1. C++ Build Artifacts (CMake/Make)
+# ==========================================
+build/
+bin/
+obj/
+*.o
+*.a
+*.so
+mun_os
+mun-ar
+
+# ==========================================
+# 2. Rust Build Artifacts (Cargo)
+# ==========================================
+target/
+**/*.rs.bk
+Cargo.lock
+
+# ==========================================
+# 3. IDE & Editor Files (VS Code / Windows)
+# ==========================================
+.vscode/
+.history/
+*.suo
+*.user
+*.code-workspace
+Thumbs.db
+.DS_Store
+
+# ==========================================
+# 4. Container Runtime Specifics (Crucial!)
+# ==========================================
+# Local testing root filesystems (don't commit 100MB+ OS images)
+rootfs/
+alpine/
+ubuntu_fs/
+
+# Runtime state and logs
+state/
+*.log
+*.json_state
+
+# ==========================================
+# 5. CMake Specifics (if not using a build/ folder)
+# ==========================================
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
