@@ -4,3 +4,11 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+# Safe wrappers for Linux system calls (clone, mount, etc.)
+nix = { version = "0.27", features = ["fs", "sched", "process", "user", "mount","unistd"] }
+
+# Framework for serializing and deserializing Rust data structures
+serde = { version = "1.0", features = ["derive"] }
+
+# Support for JSON format specifically
+serde_json = "1.0"
