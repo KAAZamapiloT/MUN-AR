@@ -5,7 +5,7 @@ edition = "2021"
 
 [dependencies]
 # Safe wrappers for Linux system calls (clone, mount, etc.)
-nix = { version = "0.27.1", features = ["sched", "user","sys", "process", "mount", "hostname", "signal", "fs"] }
+nix = { version = "0.27.1", features = ["sched", "user", "process", "mount", "hostname", "signal", "fs", "socket", "term"] }
 
 # Framework for serializing and deserializing Rust data structures
 serde = { version = "1.0", features = ["derive"] }
